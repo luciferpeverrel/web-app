@@ -17,7 +17,7 @@ phases:
   post_build:
     commands:
       - echo "Uploading frontend to S3..."
-      - aws s3 sync frontend/ s3://my-app-frontend --delete
+      - aws s3 sync frontend/ s3://web-app-abhigyan --delete
       - echo "Updating AWS Lambda..."
       - aws lambda update-function-code --function-name web-app-abhigyan --zip-file fileb://backend/lambda.zip
 
