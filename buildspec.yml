@@ -13,6 +13,7 @@ phases:
     commands:
       - echo "Zipping function..."
       - zip -r lambda.zip index.js node_modules package.json
+      - cd ..
       - echo "Uploading frontend to S3..."
       - aws s3 sync frontend/ s3://web-app-abhigyan
 
