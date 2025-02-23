@@ -13,11 +13,11 @@ phases:
     commands:
       - echo "Zipping function..."
       - zip -r lambda.zip index.js node_modules package.json
+      - echo "Uploading frontend to S3..."
+      - aws s3 sync frontend/ s3://web-app-abhigyan
 
   post_build:
     commands:
-      - echo "Uploading frontend to S3..."
-      - aws s3 sync frontend/ s3://web-app-abhigyan --delete
       - echo "Updating AWS Lambda..."
       - aws lambda update-function-code --function-name web-app-abhigyan --zip-file fileb://backend/lambda.zip
 
