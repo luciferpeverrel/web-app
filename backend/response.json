@@ -1,0 +1,1 @@
+{"statusCode":200,"headers":{"x-powered-by":"Express","content-type":"application/json; charset=utf-8","content-length":"32","etag":"W/\"20-3mrbqUO0pwOKyIU9nGe4a9Fe+xM\""},"isBase64Encoded":false,"body":"{\"message\":\"Hello from Lambda!\"}"}
